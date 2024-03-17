@@ -1,0 +1,8 @@
+2023-10-25 12:51:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valeur trop longue pour la colonne "CONTENU CHARACTER VARYING(255)": "U&'Les Nymph\\00e9as sont une s\\00e9rie de toiles impressionnistes repr\\00e9senta... (400)"
+Value too long for column "CONTENU CHARACTER VARYING(255)": "U&'Les Nymph\\00e9as sont une s\\00e9rie de toiles impressionnistes repr\\00e9senta... (400)"; SQL statement:
+insert into article (id, auteur, contenu, date_publication, titre) values (default, ?, ?, ?, ?) [22001-214]
+2023-10-25 12:51:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valeur trop longue pour la colonne "CONTENU CHARACTER VARYING(255)": "U&'Les Nymph\\00e9as sont une s\\00e9rie de toiles impressionnistes repr\\00e9senta... (400)"
+Value too long for column "CONTENU CHARACTER VARYING(255)": "U&'Les Nymph\\00e9as sont une s\\00e9rie de toiles impressionnistes repr\\00e9senta... (400)"; SQL statement:
+insert into article (id, auteur, contenu, date_publication, titre) values (default, ?, ?, ?, ?) [22001-214]

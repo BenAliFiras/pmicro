@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/views/EditEvent.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1695938520725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695938696069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React, { Component, useEffect, useState } from 'react';\r\n+import React, {  useEffect, useState } from 'react';\r\n import { Form, FormGroup, Label, Input, Button } from 'reactstrap';\r\n import { useParams } from 'react-router-dom';\r\n import axios from 'axios';\r\n \r\n"
+                }
+            ],
+            "date": 1695938520725,
+            "name": "Commit-0",
+            "content": "import React, { Component, useEffect, useState } from 'react';\r\nimport { Form, FormGroup, Label, Input, Button } from 'reactstrap';\r\nimport { useParams } from 'react-router-dom';\r\nimport axios from 'axios';\r\n\r\nfunction EditEvent() {\r\n  const { id } = useParams();\r\n  const [eventData, setEventData] = useState({\r\n    nom_event: '',\r\n    lieu_event: '',\r\n    date_debut: '',\r\n    date_fin: '',\r\n    image_event: '',\r\n    isActive: '',\r\n  });\r\n\r\n  useEffect(() => {\r\n    axios\r\n      .get(`http://localhost:8084/events/${id}`)\r\n      .then(response => {\r\n        setEventData(response.data);\r\n      })\r\n      .catch(error => {\r\n        console.error('Error fetching event data:', error);\r\n      });\r\n  }, [id]);\r\n\r\n  const handleChange = (e) => {\r\n    setEventData({\r\n      ...eventData,\r\n      [e.target.name]: e.target.value,\r\n    });\r\n  }\r\n\r\n  const handleSubmit = (e) => {\r\n    e.preventDefault();\r\n    const updatedEventData = { ...eventData };\r\n    axios\r\n      .put(`http://localhost:8084/events/${id}`, updatedEventData)\r\n      .then(response => {\r\n        console.log('Event updated:', response.data);\r\n      })\r\n      .catch(error => {\r\n        console.error('Error updating event:', error);\r\n      });\r\n  }\r\n\r\n  return (\r\n    <div className=\"content\">\r\n      <h1>Edit Event</h1>\r\n      <Form onSubmit={handleSubmit}>\r\n        <FormGroup>\r\n          <Label for=\"nom_event\">Event Name</Label>\r\n          <Input\r\n            type=\"text\"\r\n            name=\"nom_event\"\r\n            id=\"nom_event\"\r\n            value={eventData.nom_event}\r\n            onChange={handleChange}\r\n          />\r\n        </FormGroup>\r\n        <FormGroup>\r\n          <Label for=\"lieu_event\">Event Location</Label>\r\n          <Input\r\n            type=\"text\"\r\n            name=\"lieu_event\"\r\n            id=\"lieu_event\"\r\n            value={eventData.lieu_event}\r\n            onChange={handleChange}\r\n          />\r\n        </FormGroup>\r\n        <FormGroup>\r\n          <Label for=\"date_debut\">Start Date</Label>\r\n          <Input\r\n            type=\"text\"\r\n            name=\"date_debut\"\r\n            id=\"date_debut\"\r\n            value={eventData.date_debut}\r\n            onChange={handleChange}\r\n          />\r\n        </FormGroup>\r\n        <FormGroup>\r\n          <Label for=\"date_fin\">End Date</Label>\r\n          <Input\r\n            type=\"text\"\r\n            name=\"date_fin\"\r\n            id=\"date_fin\"\r\n            value={eventData.date_fin}\r\n            onChange={handleChange}\r\n          />\r\n        </FormGroup>\r\n        <FormGroup>\r\n          <Label for=\"image_event\">Event Image URL</Label>\r\n          <Input\r\n            type=\"text\"\r\n            name=\"image_event\"\r\n            id=\"image_event\"\r\n            value={eventData.image_event}\r\n            onChange={handleChange}\r\n          />\r\n        </FormGroup>\r\n        <FormGroup>\r\n          <Label for=\"isActive\">Is Active</Label>\r\n          <Input\r\n            type=\"text\"\r\n            name=\"isActive\"\r\n            id=\"isActive\"\r\n            value={eventData.isActive}\r\n            onChange={handleChange}\r\n          />\r\n        </FormGroup>\r\n        <Button color=\"primary\" type=\"submit\">\r\n          Update Event\r\n        </Button>\r\n      </Form>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default EditEvent;\r\n"
+        }
+    ]
+}

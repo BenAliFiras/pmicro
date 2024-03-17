@@ -1,0 +1,22 @@
+{
+    "sourceFile": "routes/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1697559016644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697559030387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,9 @@\n-const express = require(\"express\");\r\n-const router = express.Router();\r\n-const userController = require(\"./controllers/UserController.js\");\r\n+var express = require('express');\r\n+var router = express.Router();\r\n \r\n-// Register\r\n-router.post('/register', userController.registerUser);\r\n+/* GET home page. */\r\n+router.get('/', function(req, res, next) {\r\n+  res.json('welcome to express');\r\n+});\r\n \r\n-// Login\r\n-router.post('/login', userController.loginUser);\r\n-\r\n-// Logout\r\n-router.post('/logout', userController.logoutUser);\r\n-\r\n-// Update user\r\n-router.patch('/update', userController.updateUser);\r\n-\r\n-// Delete user\r\n\\ No newline at end of file\n-router.delete('/delete', userController.deleteUser);\r\n-\r\n-// Ban user\r\n-router.patch('/ban', userController.banUser);\r\n-\r\n-module.exports = router;\n+module.exports = router;\r\n"
+                }
+            ],
+            "date": 1697559016644,
+            "name": "Commit-0",
+            "content": "const express = require(\"express\");\r\nconst router = express.Router();\r\nconst userController = require(\"./controllers/UserController.js\");\r\n\r\n// Register\r\nrouter.post('/register', userController.registerUser);\r\n\r\n// Login\r\nrouter.post('/login', userController.loginUser);\r\n\r\n// Logout\r\nrouter.post('/logout', userController.logoutUser);\r\n\r\n// Update user\r\nrouter.patch('/update', userController.updateUser);\r\n\r\n// Delete user\r\nrouter.delete('/delete', userController.deleteUser);\r\n\r\n// Ban user\r\nrouter.patch('/ban', userController.banUser);\r\n\r\nmodule.exports = router;"
+        }
+    ]
+}

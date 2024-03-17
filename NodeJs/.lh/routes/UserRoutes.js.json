@@ -1,0 +1,154 @@
+{
+    "sourceFile": "routes/UserRoutes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 34,
+            "patches": [
+                {
+                    "date": 1697557498352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697557726873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n const userController = require(\"../controllers/UserController.js\");\r\n-const { checkEmail } = require(\"../controllers/UserController.js\");\n\\ No newline at end of file\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1697558252444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,23 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n const userController = require(\"../controllers/UserController.js\");\r\n \r\n+// Register\r\n+router.post('/register', userController.registerUser);\r\n \r\n+// Login\r\n+router.post('/login', userController.loginUser);\r\n+\r\n+// Logout\r\n+router.post('/logout', userController.logoutUser);\r\n+\r\n+// Update user\r\n+router.patch('/update', userController.updateUser);\r\n+\r\n+// Delete user\r\n+router.delete('/delete', userController.deleteUser);\r\n+\r\n+// Ban user\r\n+router.patch('/ban', userController.banUser);\r\n+\r\n+module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697558265789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require(\"../controllers/UserController.js\");\r\n+const userController = require(\"./controllers/UserController.js\");\r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n \r\n"
+                },
+                {
+                    "date": 1697558564772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,7 @@\n \r\n // Ban user\r\n router.patch('/ban', userController.banUser);\r\n \r\n+\r\n+\r\n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697558593559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,39 @@\n+const express = require(\"express\");\r\n+const router = express.Router();\r\n+const userController = require(\"./controllers/UserController.js\");\r\n+\r\n+// Register\r\n+router.post('/register', userController.registerUser);\r\n+\r\n+// Login\r\n+router.post('/login', userController.loginUser);\r\n+\r\n+// Logout\r\n+router.post('/logout', userController.logoutUser);\r\n+\r\n+// Update user\r\n+router.patch('/update', userController.updateUser);\r\n+\r\n+// Delete user\r\n+router.delete('/delete', userController.deleteUser);\r\n+\r\n+// Ban user\r\n+router.patch('/ban', userController.banUser);\r\n+\r\n+\r\n+const app = express();\r\n+const PORT = process.env.PORT || 3000;\r\n+\r\n+app.use(express.json());\r\n+app.use('/users', userRoutes);\r\n+\r\n+mongoose.connect(/* your MongoDB connection string */, { useNewUrlParser: true, useUnifiedTopology: true })\r\n+  .then(() => {\r\n+    app.listen(PORT, () => {\r\n+      console.log(`Server is running on http://localhost:${PORT}`);\r\n+    });\r\n+  })\r\n+  .catch((error) => console.error('Error connecting to the database', error));\r\n+\r\n+\r\n+module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697558623569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+const express = require(\"express\");\r\n+const router = express.Router();\r\n+const userController = require(\"./controllers/UserController.js\");\r\n+\r\n+// Register\r\n+router.post('/register', userController.registerUser);\r\n+\r\n+// Login\r\n+router.post('/login', userController.loginUser);\r\n+\r\n+// Logout\r\n+router.post('/logout', userController.logoutUser);\r\n+\r\n+// Update user\r\n+router.patch('/update', userController.updateUser);\r\n+\r\n+// Delete user\r\n+router.delete('/delete', userController.deleteUser);\r\n+\r\n+// Ban user\r\n+router.patch('/ban', userController.banUser);\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697558917405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+const express = require(\"express\");\r\n+const router = express.Router();\r\n+const userController = require(\"../controllers/UserController.js\");\r\n+\r\n+// Register\r\n+router.post('/register', userController.registerUser);\r\n+\r\n+// Login\r\n+router.post('/login', userController.loginUser);\r\n+\r\n+// Logout\r\n+router.post('/logout', userController.logoutUser);\r\n+\r\n+// Update user\r\n+router.patch('/update', userController.updateUser);\r\n+\r\n+// Delete user\r\n+router.delete('/delete', userController.deleteUser);\r\n+\r\n+// Ban user\r\n+router.patch('/ban', userController.banUser);\r\n+\r\n+module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697559003268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+const express = require(\"express\");\r\n+const router = express.Router();\r\n+const userController = require(\"./controllers/UserController.js\");\r\n+\r\n+// Register\r\n+router.post('/register', userController.registerUser);\r\n+\r\n+// Login\r\n+router.post('/login', userController.loginUser);\r\n+\r\n+// Logout\r\n+router.post('/logout', userController.logoutUser);\r\n+\r\n+// Update user\r\n+router.patch('/update', userController.updateUser);\r\n+\r\n+// Delete user\r\n+router.delete('/delete', userController.deleteUser);\r\n+\r\n+// Ban user\r\n+router.patch('/ban', userController.banUser);\r\n+\r\n+module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697559341180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require(\"./controllers/UserController.js\");\r\n+const userController = require(\"./controllers/userController.js\");\r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n \r\n@@ -19,119 +19,5 @@\n \r\n // Ban user\r\n router.patch('/ban', userController.banUser);\r\n \r\n-module.exports = router;\n-const express = require(\"express\");\r\n-const router = express.Router();\r\n-const userController = require(\"../controllers/UserController.js\");\r\n-\r\n-// Register\r\n-router.post('/register', userController.registerUser);\r\n-\r\n-// Login\r\n-router.post('/login', userController.loginUser);\r\n-\r\n-// Logout\r\n-router.post('/logout', userController.logoutUser);\r\n-\r\n-// Update user\r\n-router.patch('/update', userController.updateUser);\r\n-\r\n-// Delete user\r\n-router.delete('/delete', userController.deleteUser);\r\n-\r\n-// Ban user\r\n-router.patch('/ban', userController.banUser);\r\n-\r\n-module.exports = router;\n-const express = require(\"express\");\r\n-const router = express.Router();\r\n-const userController = require(\"./controllers/UserController.js\");\r\n-\r\n-// Register\r\n-router.post('/register', userController.registerUser);\r\n-\r\n-// Login\r\n-router.post('/login', userController.loginUser);\r\n-\r\n-// Logout\r\n-router.post('/logout', userController.logoutUser);\r\n-\r\n-// Update user\r\n-router.patch('/update', userController.updateUser);\r\n-\r\n-// Delete user\r\n-router.delete('/delete', userController.deleteUser);\r\n-\r\n-// Ban user\r\n-router.patch('/ban', userController.banUser);\r\n-\r\n-\r\n-\r\n-\r\n-\r\n-module.exports = router;\n-const express = require(\"express\");\r\n-const router = express.Router();\r\n-const userController = require(\"./controllers/UserController.js\");\r\n-\r\n-// Register\r\n-router.post('/register', userController.registerUser);\r\n-\r\n-// Login\r\n-router.post('/login', userController.loginUser);\r\n-\r\n-// Logout\r\n-router.post('/logout', userController.logoutUser);\r\n-\r\n-// Update user\r\n-router.patch('/update', userController.updateUser);\r\n-\r\n-// Delete user\r\n-router.delete('/delete', userController.deleteUser);\r\n-\r\n-// Ban user\r\n-router.patch('/ban', userController.banUser);\r\n-\r\n-\r\n-const app = express();\r\n-const PORT = process.env.PORT || 3000;\r\n-\r\n-app.use(express.json());\r\n-app.use('/users', userRoutes);\r\n-\r\n-mongoose.connect(/* your MongoDB connection string */, { useNewUrlParser: true, useUnifiedTopology: true })\r\n-  .then(() => {\r\n-    app.listen(PORT, () => {\r\n-      console.log(`Server is running on http://localhost:${PORT}`);\r\n-    });\r\n-  })\r\n-  .catch((error) => console.error('Error connecting to the database', error));\r\n-\r\n-\r\n-module.exports = router;\n-const express = require(\"express\");\r\n-const router = express.Router();\r\n-const userController = require(\"./controllers/UserController.js\");\r\n-\r\n-// Register\r\n-router.post('/register', userController.registerUser);\r\n-\r\n-// Login\r\n-router.post('/login', userController.loginUser);\r\n-\r\n-// Logout\r\n-router.post('/logout', userController.logoutUser);\r\n-\r\n-// Update user\r\n-router.patch('/update', userController.updateUser);\r\n-\r\n-// Delete user\r\n-router.delete('/delete', userController.deleteUser);\r\n-\r\n-// Ban user\r\n-router.patch('/ban', userController.banUser);\r\n-\r\n-\r\n-\r\n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697559399830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require(\"./controllers/userController.js\");\r\n+const userController = require(\"./controllers/\");\r\n \r\n+\r\n // Register\r\n router.post('/register', userController.registerUser);\r\n \r\n // Login\r\n"
+                },
+                {
+                    "date": 1697559405234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require(\"./controllers/\");\r\n+const userController = require(\"./controllers\");\r\n \r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n"
+                },
+                {
+                    "date": 1697559410463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require(\"./controllers\");\r\n+const userController = require(\"./\");\r\n \r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n"
+                },
+                {
+                    "date": 1697559415899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require(\"./\");\r\n+const userController = require('')\r\n \r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n"
+                },
+                {
+                    "date": 1697559426682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require('')\r\n+const userController = require('./');\r\n \r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n"
+                },
+                {
+                    "date": 1697559432351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require('./');\r\n+const userController = require('.');\r\n \r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n"
+                },
+                {
+                    "date": 1697559441696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require('.');\r\n+const userController = require('c');\r\n \r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n"
+                },
+                {
+                    "date": 1697559449555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require('c');\r\n+const userController = require('');\r\n \r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n"
+                },
+                {
+                    "date": 1697559479685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require('');\r\n+const userController = require(\"./controlle\");\r\n \r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n"
+                },
+                {
+                    "date": 1697559487537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require(\"./controlle\");\r\n+const userController = require(\"/);\r\n \r\n-\r\n // Register\r\n router.post('/register', userController.registerUser);\r\n \r\n // Login\r\n"
+                },
+                {
+                    "date": 1697559493037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require(\"/);\r\n+const userController = require(\"./\");\r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n \r\n"
+                },
+                {
+                    "date": 1697559521811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require(\"./\");\r\n+const userController = require(\"/\");\r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n \r\n"
+                },
+                {
+                    "date": 1697559529001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require(\"/\");\r\n+const userController = require(\"../controllers/\");\r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n \r\n"
+                },
+                {
+                    "date": 1697565143652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require(\"express\");\r\n const router = express.Router();\r\n-const userController = require(\"../controllers/\");\r\n+const userController = require(\"../controllers/userController\");\r\n \r\n // Register\r\n router.post('/register', userController.registerUser);\r\n \r\n@@ -19,5 +19,8 @@\n \r\n // Ban user\r\n router.patch('/ban', userController.banUser);\r\n \r\n+// Display all users\r\n+router.get('/users', userController.displayUsers);\r\n+\r\n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697565458210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,6 +21,7 @@\n router.patch('/ban', userController.banUser);\r\n \r\n // Display all users\r\n router.get('/users', userController.displayUsers);\r\n+router.get('/users', userController.displayUsers);\r\n \r\n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697565465894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,9 @@\n router.patch('/ban', userController.banUser);\r\n \r\n // Display all users\r\n router.get('/users', userController.displayUsers);\r\n+\r\n+//get user by id\r\n router.get('/users', userController.displayUsers);\r\n \r\n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697565494100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,12 @@\n \r\n //get user by id\r\n router.get('/users', userController.displayUsers);\r\n \r\n+// Update user by ID\r\n+router.patch('/users/:id/update', userController.updateUser);\r\n+\r\n+// Delete user by ID\r\n+router.delete('/users/:id/delete', userController.deleteUser);\r\n+\r\n+\r\n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697565507963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,6 +31,8 @@\n \r\n // Delete user by ID\r\n router.delete('/users/:id/delete', userController.deleteUser);\r\n \r\n+// Get user by ID\r\n+router.get('/users/:id', userController.getUserById);\r\n \r\n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697565544095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,5 +34,5 @@\n \r\n // Get user by ID\r\n router.get('/users/:id', userController.getUserById);\r\n \r\n-module.exports = router;\n\\ No newline at end of file\n+module.exports = router;\r\n"
+                },
+                {
+                    "date": 1697565636671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n // Logout\r\n router.post('/logout', userController.logoutUser);\r\n \r\n // Update user\r\n-router.patch('/update', userController.updateUser);\r\n+router.put('/update', userController.updateUser);\r\n \r\n // Delete user\r\n router.delete('/delete', userController.deleteUser);\r\n \r\n"
+                },
+                {
+                    "date": 1697565644439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n //get user by id\r\n router.get('/users', userController.displayUsers);\r\n \r\n // Update user by ID\r\n-router.patch('/users/:id/update', userController.updateUser);\r\n+router.put('/users/:id', userController.updateUser);\r\n \r\n // Delete user by ID\r\n router.delete('/users/:id/delete', userController.deleteUser);\r\n \r\n"
+                },
+                {
+                    "date": 1697565679971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n //get user by id\r\n router.get('/users', userController.displayUsers);\r\n \r\n // Update user by ID\r\n-router.put('/users/:id', userController.updateUser);\r\n+router.post('/users/:id', userController.updateUser);\r\n \r\n // Delete user by ID\r\n router.delete('/users/:id/delete', userController.deleteUser);\r\n \r\n"
+                },
+                {
+                    "date": 1697565700086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n // Update user by ID\r\n router.post('/users/:id', userController.updateUser);\r\n \r\n // Delete user by ID\r\n-router.delete('/users/:id/delete', userController.deleteUser);\r\n+router.delete('/users/:id', userController.deleteUser);\r\n \r\n // Get user by ID\r\n router.get('/users/:id', userController.getUserById);\r\n \r\n"
+                },
+                {
+                    "date": 1697565763036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,5 @@\n // Delete user by ID\r\n router.delete('/users/:id/delete', userController.deleteUser);\r\n \r\n \r\n-\r\n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697566829485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+const express = require(\"express\");\r\n+const router = express.Router();\r\n+const userController = require(\"../controllers/userController\");\r\n+\r\n+// Register te5dem\r\n+router.post('/register', userController.registerUser);\r\n+\r\n+// Login te5dem\r\n+router.post('/login', userController.loginUser);\r\n+\r\n+// Logout te5dem\r\n+router.post('/logout', userController.logoutUser);\r\n+\r\n+// Update user by ID te5dem\r\n+router.put('/users/:id', userController.updateUser);\r\n+\r\n+// Delete user by ID\r\n+router.delete('/users/:id', userController.deleteUser);\r\n+\r\n+// Ban user\r\n+router.put('/users/:id/ban', userController.banUser);\r\n+\r\n+// Display all users te5dem\r\n+router.get('/users', userController.displayUsers);\r\n+\r\n+module.exports = router;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1697557498352,
+            "name": "Commit-0",
+            "content": "const express = require(\"express\");\r\nconst router = express.Router();\r\nconst userController = require(\"../controllers/UserController.js\");\r\nconst { checkEmail } = require(\"../controllers/UserController.js\");"
+        }
+    ]
+}

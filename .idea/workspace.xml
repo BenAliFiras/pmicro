@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5aa4bc7d-34f0-478d-bc01-a46c8f62cddf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2VwKEfkGW2c6B8L3WrwnOgmefNJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;AhmedBranch__Event__Ms&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yasse/Documents/GitHub/web-distributed/Gallery&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5aa4bc7d-34f0-478d-bc01-a46c8f62cddf" name="Changes" comment="" />
+      <created>1695741599700</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695741599700</updated>
+      <workItem from="1695741602620" duration="448000" />
+      <workItem from="1695742082164" duration="516000" />
+      <workItem from="1696248618019" duration="288000" />
+      <workItem from="1696866133014" duration="4994000" />
+      <workItem from="1696879932800" duration="1679000" />
+      <workItem from="1696884743488" duration="4826000" />
+      <workItem from="1696926559530" duration="667000" />
+      <workItem from="1696936801566" duration="824000" />
+      <workItem from="1697018239837" duration="1272000" />
+      <workItem from="1697114671252" duration="2757000" />
+      <workItem from="1697317396854" duration="1003000" />
+      <workItem from="1697365105312" duration="1368000" />
+      <workItem from="1697403569813" duration="355000" />
+      <workItem from="1697556306943" duration="751000" />
+      <workItem from="1697560388829" duration="4000" />
+      <workItem from="1697569205628" duration="3297000" />
+      <workItem from="1698165989231" duration="144000" />
+      <workItem from="1698336901674" duration="11000" />
+      <workItem from="1698338209598" duration="23000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

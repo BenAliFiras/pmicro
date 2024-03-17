@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/views/ExcelExport.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1695923137887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695923264420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import * as XLSX from 'xlsx';\r\n+\r\n+\r\n+export function exportToExcel(products) {\r\n+  const ws = XLSX.utils.json_to_sheet(products);\r\n+  const wb = XLSX.utils.book_new();\r\n+  XLSX.utils.book_append_sheet(wb, ws, 'Products');\r\n+  XLSX.writeFile(wb, 'products.xlsx');\r\n+}\r\n"
+                }
+            ],
+            "date": 1695923137887,
+            "name": "Commit-0",
+            "content": "import XLSX from 'xlsx';\r\n\r\nexport function exportToExcel(products) {\r\n  const ws = XLSX.utils.json_to_sheet(products);\r\n  const wb = XLSX.utils.book_new();\r\n  XLSX.utils.book_append_sheet(wb, ws, 'Products');\r\n  XLSX.writeFile(wb, 'products.xlsx');\r\n}\r\n"
+        }
+    ]
+}

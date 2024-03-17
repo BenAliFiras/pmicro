@@ -1,0 +1,46 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1697575422906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697575429894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,13 +45,13 @@\n     \"eject\": \"react-scripts eject\",\r\n     // \"lint\": \"eslint ./src\",\r\n     \"prettify\": \"prettier --write .\"\r\n   },\r\n-  \"eslintConfig\": {\r\n-    \"extends\": [\r\n-      \"react-app\",\r\n-      \"react-app/jest\"\r\n-    ]\r\n+  // \"eslintConfig\": {\r\n+  //   \"extends\": [\r\n+  //     \"react-app\",\r\n+  //     \"react-app/jest\"\r\n+  //   ]\r\n   },\r\n   \"browserslist\": {\r\n     \"production\": [\r\n       \">0.2%\",\r\n"
+                },
+                {
+                    "date": 1697575436866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,13 +45,13 @@\n     \"eject\": \"react-scripts eject\",\r\n     // \"lint\": \"eslint ./src\",\r\n     \"prettify\": \"prettier --write .\"\r\n   },\r\n-  // \"eslintConfig\": {\r\n-  //   \"extends\": [\r\n-  //     \"react-app\",\r\n-  //     \"react-app/jest\"\r\n-  //   ]\r\n+  \"eslintConfig\": {\r\n+    \"extends\": [\r\n+      \"react-app\",\r\n+      \"react-app/jest\"\r\n+    ]\r\n   },\r\n   \"browserslist\": {\r\n     \"production\": [\r\n       \">0.2%\",\r\n"
+                },
+                {
+                    "date": 1697575444633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,14 +45,14 @@\n     \"eject\": \"react-scripts eject\",\r\n     // \"lint\": \"eslint ./src\",\r\n     \"prettify\": \"prettier --write .\"\r\n   },\r\n-  \"eslintConfig\": {\r\n-    \"extends\": [\r\n-      \"react-app\",\r\n-      \"react-app/jest\"\r\n-    ]\r\n-  },\r\n+  // \"eslintConfig\": {\r\n+  //   \"extends\": [\r\n+  //     \"react-app\",\r\n+  //     \"react-app/jest\"\r\n+  //   ]\r\n+  // },\r\n   \"browserslist\": {\r\n     \"production\": [\r\n       \">0.2%\",\r\n       \"not dead\",\r\n"
+                },
+                {
+                    "date": 1697575457701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,14 +45,8 @@\n     \"eject\": \"react-scripts eject\",\r\n     // \"lint\": \"eslint ./src\",\r\n     \"prettify\": \"prettier --write .\"\r\n   },\r\n-  // \"eslintConfig\": {\r\n-  //   \"extends\": [\r\n-  //     \"react-app\",\r\n-  //     \"react-app/jest\"\r\n-  //   ]\r\n-  // },\r\n   \"browserslist\": {\r\n     \"production\": [\r\n       \">0.2%\",\r\n       \"not dead\",\r\n"
+                },
+                {
+                    "date": 1697575464073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,8 @@\n     \"start\": \"react-scripts start\",\r\n     \"build\": \"react-scripts build\",\r\n     \"test\": \"react-scripts test\",\r\n     \"eject\": \"react-scripts eject\",\r\n-    // \"lint\": \"eslint ./src\",\r\n     \"prettify\": \"prettier --write .\"\r\n   },\r\n   \"browserslist\": {\r\n     \"production\": [\r\n"
+                },
+                {
+                    "date": 1697575470571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,14 +57,7 @@\n       \"last 1 safari version\"\r\n     ]\r\n   },\r\n   \"devDependencies\": {\r\n-    \"eslint\": \"8.38.0\",\r\n-    \"eslint-config-prettier\": \"8.8.0\",\r\n-    \"eslint-plugin-import\": \"2.27.5\",\r\n-    \"eslint-plugin-jsx-a11y\": \"6.7.1\",\r\n-    \"eslint-plugin-prettier\": \"4.2.1\",\r\n-    \"eslint-plugin-react\": \"7.32.2\",\r\n-    \"eslint-plugin-react-hooks\": \"4.6.0\",\r\n     \"prettier\": \"2.8.7\"\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1697576516023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,7 +57,6 @@\n       \"last 1 safari version\"\r\n     ]\r\n   },\r\n   \"devDependencies\": {\r\n-    \"prettier\": \"2.8.7\"\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1697575422906,
+            "name": "Commit-0",
+            "content": "{\r\n  \"name\": \"material-kit-2-react\",\r\n  \"version\": \"2.1.0\",\r\n  \"private\": true,\r\n  \"author\": \"Creative Tim\",\r\n  \"license\": \"See license in https://www.creative-tim.com/license\",\r\n  \"description\": \"React version of Material Kit 2 by Creative Tim\",\r\n  \"homepage\": \"https://demos.creative-tim.com/material-kit-react/#/\",\r\n  \"bugs\": {\r\n    \"url\": \"https://github.com/creativetimofficial/ct-material-kit-react/issues\"\r\n  },\r\n  \"repository\": {\r\n    \"type\": \"git\",\r\n    \"url\": \"git+https://github.com/creativetimofficial/ct-material-kit-react.git\"\r\n  },\r\n  \"dependencies\": {\r\n    \"@emotion/cache\": \"11.10.7\",\r\n    \"@emotion/react\": \"11.10.6\",\r\n    \"@emotion/styled\": \"11.10.6\",\r\n    \"@mui/icons-material\": \"5.11.16\",\r\n    \"@mui/material\": \"5.12.0\",\r\n    \"@mui/styled-engine\": \"5.12.0\",\r\n    \"@testing-library/jest-dom\": \"5.16.5\",\r\n    \"@testing-library/react\": \"14.0.0\",\r\n    \"@testing-library/user-event\": \"14.4.3\",\r\n    \"axios\": \"^1.5.1\",\r\n    \"chroma-js\": \"2.4.2\",\r\n    \"flatpickr\": \"4.6.13\",\r\n    \"prop-types\": \"15.8.1\",\r\n    \"react\": \"18.2.0\",\r\n    \"react-copy-to-clipboard\": \"5.1.0\",\r\n    \"react-countup\": \"6.4.2\",\r\n    \"react-dom\": \"18.2.0\",\r\n    \"react-flatpickr\": \"3.10.13\",\r\n    \"react-router-dom\": \"6.10.0\",\r\n    \"react-scripts\": \"5.0.1\",\r\n    \"react-syntax-highlighter\": \"15.5.0\",\r\n    \"reactstrap\": \"^9.2.0\",\r\n    \"web-vitals\": \"3.3.1\"\r\n  },\r\n  \"scripts\": {\r\n    \"start\": \"react-scripts start\",\r\n    \"build\": \"react-scripts build\",\r\n    \"test\": \"react-scripts test\",\r\n    \"eject\": \"react-scripts eject\",\r\n    // \"lint\": \"eslint ./src\",\r\n    \"prettify\": \"prettier --write .\"\r\n  },\r\n  \"eslintConfig\": {\r\n    \"extends\": [\r\n      \"react-app\",\r\n      \"react-app/jest\"\r\n    ]\r\n  },\r\n  \"browserslist\": {\r\n    \"production\": [\r\n      \">0.2%\",\r\n      \"not dead\",\r\n      \"not op_mini all\"\r\n    ],\r\n    \"development\": [\r\n      \"last 1 chrome version\",\r\n      \"last 1 firefox version\",\r\n      \"last 1 safari version\"\r\n    ]\r\n  },\r\n  \"devDependencies\": {\r\n    \"eslint\": \"8.38.0\",\r\n    \"eslint-config-prettier\": \"8.8.0\",\r\n    \"eslint-plugin-import\": \"2.27.5\",\r\n    \"eslint-plugin-jsx-a11y\": \"6.7.1\",\r\n    \"eslint-plugin-prettier\": \"4.2.1\",\r\n    \"eslint-plugin-react\": \"7.32.2\",\r\n    \"eslint-plugin-react-hooks\": \"4.6.0\",\r\n    \"prettier\": \"2.8.7\"\r\n  }\r\n}\r\n"
+        }
+    ]
+}

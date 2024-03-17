@@ -1,0 +1,74 @@
+{
+    "sourceFile": ".gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1697560254367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697560262263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+HELP.md\r\n+\r\n+.env\r\n+node_modules\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697560277549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,4 @@\n HELP.md\r\n \r\n .env\r\n-node_modules\n-HELP.md\r\n-\r\n-.env\n\\ No newline at end of file\n+node_modules\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697560314087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n HELP.md\r\n \r\n .env\r\n-node_modules\n\\ No newline at end of file\n+/node_modules/*\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697560322053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n HELP.md\r\n \r\n-.env\r\n-/node_modules/*\n\\ No newline at end of file\n+/.env\r\n+/node_modules\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697560346109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n HELP.md\r\n \r\n-/.env\r\n+.env\r\n /node_modules\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697560482212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n HELP.md\r\n+# Node.js\r\n+node_modules/\r\n \r\n\\ No newline at end of file\n+# Environment variables\r\n .env\r\n-/node_modules\n"
+                },
+                {
+                    "date": 1697560517873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-HELP.md\r\n # Node.js\r\n node_modules/\r\n \r\n # Environment variables\r\n-.env\n\\ No newline at end of file\n+.env\r\n"
+                },
+                {
+                    "date": 1697560656024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n # Node.js\r\n-node_modules/\r\n+/node_modules/\r\n \r\n # Environment variables\r\n .env\r\n"
+                },
+                {
+                    "date": 1697560663854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n # Node.js\r\n-/node_modules/\r\n+/env\r\n \r\n # Environment variables\r\n .env\r\n"
+                },
+                {
+                    "date": 1697560676505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+# Node.js\r\n+/env\r\n+\r\n+# Environment variables\r\n+Node\r\n"
+                },
+                {
+                    "date": 1697560690522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,5 @@\n # Node.js\r\n-/env\r\n+/.env\r\n \r\n # Environment variables\r\n Node\r\n-# Node.js\r\n-/env\r\n-\r\n-# Environment variables\r\n-.env\r\n"
+                },
+                {
+                    "date": 1697560701765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n # Node.js\r\n /.env\r\n \r\n # Environment variables\r\n-Node\r\n+node\r\n"
+                },
+                {
+                    "date": 1697560709464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n # Node.js\r\n /.env\r\n \r\n # Environment variables\r\n-node_modules\r\n+/node_modules\r\n"
+                },
+                {
+                    "date": 1697560962240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+# Node.js\r\n+/.env\r\n+\r\n+# Ignore node_modules directory\r\n+node_modules/\r\n+\r\n+# Ignore everything in the node_modules directory except the package-lock.json file\r\n+/node_modules/*\r\n+!node_modules/package-lock.json\r\n+\r\n"
+                }
+            ],
+            "date": 1697560254367,
+            "name": "Commit-0",
+            "content": "HELP.md\r\n\r\n.env"
+        }
+    ]
+}

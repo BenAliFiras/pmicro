@@ -1,0 +1,7 @@
+com\earthrealmkoders\product\Config\KeycloakConfig.class
+com\earthrealmkoders\product\ProductService.class
+com\earthrealmkoders\product\ProductApplication.class
+com\earthrealmkoders\product\ProductController.class
+com\earthrealmkoders\product\ProductRepository.class
+com\earthrealmkoders\product\Config\KeycloakSecurityConfig.class
+com\earthrealmkoders\product\Product.class

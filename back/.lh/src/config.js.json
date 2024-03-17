@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1695855318133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695855326392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n // config.js\r\n \r\n-const API_BASE_URL = \"http://localhost:8080\"; // Remplacez par l'URL de votre microservice de produits\r\n+const API_BASE_URL = \"http://localhost:8080\"; \r\n \r\n export { API_BASE_URL };\r\n"
+                },
+                {
+                    "date": 1695855333865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+\r\n+const API_BASE_URL_ = \"http://localhost:8080\"; \r\n+\r\n+export { API_BASE_URL };\r\n"
+                },
+                {
+                    "date": 1695855338937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+\r\n+const API_BASE_URL_PRODUCT = \"http://localhost:8080\"; \r\n+\r\n+export { API_BASE_URL };\r\n"
+                },
+                {
+                    "date": 1695855472908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+\r\n+const API_BASE_URL_PRODUCT = \"http://localhost:8080\"; \r\n+\r\n+export { API_BASE_URL_PRODUCT };\r\n+\r\n+import axios from 'axios';\r\n+import { API_BASE_URL } from './config';\r\n+\r\n+// Fonction pour obtenir la liste des produits\r\n+export function fetchProducts() {\r\n+  return axios.get(`${API_BASE_URL}/products`);\r\n+}\r\n+\r\n+// Fonction pour créer un nouveau produit\r\n+export function createProduct(productData) {\r\n+  return axios.post(`${API_BASE_URL}/products`, productData);\r\n+}\r\n+\r\n+// Fonction pour mettre à jour un produit existant\r\n+export function updateProduct(productId, productData) {\r\n+  return axios.put(`${API_BASE_URL}/products/${productId}`, productData);\r\n+}\r\n+\r\n+// Fonction pour supprimer un produit\r\n+export function deleteProduct(productId) {\r\n+  return axios.delete(`${API_BASE_URL}/products/${productId}`);\r\n+}\r\n"
+                },
+                {
+                    "date": 1695855500058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+\r\n+const API_BASE_URL_PRODUCT = \"http://localhost:8085\"; \r\n+\r\n+export { API_BASE_URL_PRODUCT };\r\n+\r\n+import axios from 'axios';\r\n+import { API_BASE_URL } from './config';\r\n+\r\n+// Fonction pour obtenir la liste des produits\r\n+export function fetchProducts() {\r\n+  return axios.get(`${API_BASE_URL_PRODUCT}/products`);\r\n+}\r\n+\r\n+// Fonction pour créer un nouveau produit\r\n+export function createProduct(productData) {\r\n+  return axios.post(`${API_BASE_URL}/products`, productData);\r\n+}\r\n+\r\n+// Fonction pour mettre à jour un produit existant\r\n+export function updateProduct(productId, productData) {\r\n+  return axios.put(`${API_BASE_URL}/products/${productId}`, productData);\r\n+}\r\n+\r\n+// Fonction pour supprimer un produit\r\n+export function deleteProduct(productId) {\r\n+  return axios.delete(`${API_BASE_URL}/products/${productId}`);\r\n+}\r\n"
+                },
+                {
+                    "date": 1695855507013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+\r\n+const API_BASE_URL_PRODUCT = \"http://localhost:8085\"; \r\n+\r\n+export { API_BASE_URL_PRODUCT };\r\n+\r\n+import axios from 'axios';\r\n+import { API_BASE_URL_PRODUCT } from './config';\r\n+\r\n+// Fonction pour obtenir la liste des produits\r\n+export function fetchProducts() {\r\n+  return axios.get(`${API_BASE_URL_PRODUCT}/products`);\r\n+}\r\n+\r\n+// Fonction pour créer un nouveau produit\r\n+export function createProduct(productData) {\r\n+  return axios.post(`${API_BASE_URL_PRODUCT}/products`, productData);\r\n+}\r\n+\r\n+// Fonction pour mettre à jour un produit existant\r\n+export function updateProduct(productId, productData) {\r\n+  return axios.put(`${API_BASE_URL_PRODUCT}/products/${productId}`, productData);\r\n+}\r\n+\r\n+// Fonction pour supprimer un produit\r\n+export function deleteProduct(productId) {\r\n+  return axios.delete(`${API_BASE_URL_PRODUCT}/products/${productId}`);\r\n+}\r\n"
+                }
+            ],
+            "date": 1695855318133,
+            "name": "Commit-0",
+            "content": "// config.js\r\n\r\nconst API_BASE_URL = \"http://localhost:8080\"; // Remplacez par l'URL de votre microservice de produits\r\n\r\nexport { API_BASE_URL };\r\n"
+        }
+    ]
+}

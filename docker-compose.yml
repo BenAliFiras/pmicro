@@ -1,0 +1,139 @@
+version: "3.9"
+
+
+services:
+
+  Product:
+    container_name: product
+    build: Product
+    ports:
+      - "8090:8085"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/Galerie?createDatabaseIfNotExist=true&userSSL=false&max_allowed_packet=15728640
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    image: "productms"
+    restart: unless-stopped
+    depends_on:
+      - Eureka
+      - db-mysql
+  
+  event-service:
+    container_name: event-service
+    build: Events
+    ports:
+      - "8096:8084"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/Galerie?createDatabaseIfNotExist=true&userSSL=false&max_allowed_packet=15728640
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    image: event-service
+    restart: unless-stopped
+    depends_on:
+      - Eureka
+      - db-mysql
+
+
+  Gallery:
+    container_name: gallery
+    build: Gallery
+    ports:
+      - "8095:8086"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/Galerie?createDatabaseIfNotExist=true&userSSL=false&max_allowed_packet=15728640
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    image: "gallereyms"
+    restart: unless-stopped
+    depends_on:
+      - Eureka
+      - db-mysql
+
+
+  Article:
+    container_name: article
+    image: "articlems"
+    build: Article
+    ports:
+      - "8094:8089"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    depends_on:
+      - "Eureka"
+
+  Reclamation:
+    container_name: reclamtion
+    image: "reclamationms"
+    build: Reclamation
+    ports:
+      - "8093:8083"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    depends_on:
+      - "Eureka"
+
+
+
+  Fidelite:
+    container_name: fidelite
+    image: "fidelitems"
+    build: Fidelite_MS
+    ports:
+      - "8092:8082"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    depends_on:
+      - "Eureka"
+
+
+  Eureka:
+    container_name: eureka
+    build: MyEurekaServer
+    hostname: serviceregistry
+    ports:
+      - "8761:8761"   
+    image: "eureka"
+    
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://serviceregistry:8761/eureka/
+
+  Api-Gateway:
+    container_name: gateway
+    build: Api-Gateway
+    ports:
+      - "8200:8700"
+    image: "gateway"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://serviceregistry:8761/eureka/
+    depends_on:
+      - Eureka
+
+
+  db-mysql:
+      image: "mysql:latest"
+      container_name: db-mysql  
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+        #- MYSQL_DATABASE=job
+      ports:
+        - "3307:3306"
+      restart: unless-stopped  
+
+  my-mongodb:
+    image: mongo
+    container_name: my-mongodb
+    ports:
+      - "27017:27017"
+
+  nodejs-app:
+    build:
+      context: NodeJs
+    container_name: nodejs-app
+    ports:
+      - "5001:5000"
+    depends_on:
+      - my-mongodb
+
